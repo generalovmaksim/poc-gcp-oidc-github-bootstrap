@@ -1,0 +1,24 @@
+{
+	"name": "PoC-GCP-OIDC-GitHub-Bootstrap",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "poc-gcp-oidc-github-bootstrap",
+	"workspaceFolder": "/automation",
+	"customizations": {
+		"vscode": {
+		"settings": {
+		"yaml.format.singleQuote": true
+		},
+			"extensions": [
+				"hashicorp.terraform",
+				"hookyqr.beautify",
+				"davidanson.vscode-markdownlint",
+				"christian-kohler.path-intellisense",
+				"redhat.vscode-yaml",
+				"formulahendry.auto-rename-tag",
+				"p1c2u.docker-compose",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	},
+	"remoteUser": "root"
+}

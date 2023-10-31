@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  poc-gcp-oidc-github-bootstrap:
+    build: .
+    container_name: poc-gcp-oidc-github-bootstrap
+    hostname: poc-gcp-oidc-github-bootstrap
+    user: root
+    volumes:
+    - ~/.config/gcloud/:/root/.config/gcloud
+    - ~/Documents/Automation/:/automation/
+    environment:
+    - LOGNAME=$LOGNAME
+    - USE_GKE_GCLOUD_AUTH_PLUGIN=True
+    command: sleep infinity
