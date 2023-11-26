@@ -17,3 +17,10 @@ resource "google_project_iam_member" "StorageBucketList" {
   role    = google_project_iam_custom_role.StorageBucketListRole.id
   member  = "serviceAccount:${google_service_account.github_actions.email}"
 }
+resource "google_storage_bucket_iam_binding" "TerraformBackend" {
+  bucket = "poc-gke-arm-based"
+  role   = "roles/storage.admin"
+  members = [
+    "serviceAccount:${google_service_account.github_actions.email}"
+  ]
+}
